@@ -1,11 +1,20 @@
-import { render, screen } from '@testing-library/react'
-import cats from '../../mocks/cats.json'
+import { render, screen } from "@testing-library/react";
+import Cards from "../Cards";
+import cats from "../../mocks/cats.json";
+import { PetsContext } from "../Pets";
 
-import Cards from '../Cards'
-
-describe('Cards', () => {
-  test('should render five card component', () => {
-    render(<Cards cats={cats} />)
-    expect(screen.getAllByRole('article').length).toBe(5)
-  })
-})
+describe("Cards", () => {
+  test("should render five card components", () => {
+    render(
+      <PetsContext.Provider
+        value={{
+          cats,
+          setCats: () => { },
+        }}
+      >
+        <Cards />
+      </PetsContext.Provider>
+    );
+    expect(screen.getAllByRole("article").length).toBe(5);
+  });
+});

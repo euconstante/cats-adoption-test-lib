@@ -1,3 +1,7 @@
+import React from 'react'
+
+import './style.css'
+
 const Filter = ({ filters, setFilters }) => (
   <div className="pet-filter-container">
     <div className="filter-container">

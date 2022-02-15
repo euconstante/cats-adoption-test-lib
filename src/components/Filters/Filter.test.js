@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import Filter from '../Filters'
-import userEvent from '@testing-library/user-event'
+import { render, screen } from "@testing-library/react";
+import Filter from "../Filters";
+import userEvent from "@testing-library/user-event";
 
 beforeEach(() => render(<Filter filters={{}} setFilters={() => { }} />));
 
